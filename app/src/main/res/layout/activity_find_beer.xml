@@ -4,11 +4,12 @@
     android:id="@+id/activity_find_beer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="beeradviser.hfad.com.beeradviser.FindBeerActivity">
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".FindBeerActivity">
+
 
     <Spinner
         android:id="@+id/color"
@@ -16,15 +17,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp" />
+        android:entries="@array/beer_colors"/>
 
     <Button
         android:id="@+id/find_beer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/color"
+        android:layout_alignLeft="@id/color"
         android:layout_below="@+id/color"
-        android:text="@string/button" />
+        android:text="@string/find_beer"
+        android:onClick="onClickFindBeer"/>
 
     <TextView
         android:id="@+id/brand"
@@ -33,7 +35,5 @@
         android:layout_alignLeft="@id/find_beer"
         android:layout_below="@id/find_beer"
         android:layout_marginTop="18dp"
-        android:text="@string/hello_world" />
-
-
+        android:text="@string/brand" />
 </RelativeLayout>
